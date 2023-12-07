@@ -168,31 +168,6 @@ https://www.notion.so/2-Warendy-c7bdcf817a484e5ab61b05e13a9c4f66?pvs=4#3f916b53c
     | Reason | 여러 이벤트 처리와 상태 관리를 해야하며 코드가 길어진다. 그리고 라이브러리 없이 브라우저의 네이티브 드래그앤드롭 API를 사용한다면 구현은 가능하지만 크로스브라우징과 브라우저 호환성 문제로 인해 꽤 복잡해질 수 있다. 그래서 라이브러리 기능을 사용하는 것이 보편적이라고 한다. |
     | Try to solve | react-dnd로 ‘나만의 와인 컬렉션’ 페이지의 dnd 기능 구현
     
-    1. 컨테이너 간의 아이템 이동이 불가능
-    2. hover 중일 때 순서가 변경되는 애니메이션이나 위치 변경 직접 정의해야함 |
-    | Alternative | react-beautiful-dnd로 대체
-    
-    1. 컨테이너 간의 아이템 이동이 자유로움
-    2. 어느 좌표부터 순서를 변경할 지 결정하는 로직 잘 구성되어있음
-    3. UI/UX나 퍼포먼스가 좋은 동작이 predefined 되어있음 |
-    
-    | Problem | CORS 정책 문제로 개발 환경 proxy 설정
-    Access to fetch at 'https://warendy.shop/signin' from origin 'http://localhost:3000/' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
-     |
-    | --- | --- |
-    | Reason | module.exports = {
-      async rewrites() {
-        return [
-          {
-            source: "http://localhost:3000/sign-in",
-            destination: "https://warendy.shop/signin”,
-          },
-        ];
-      },
-    };
-    proxy 설정 후 websocket 오류 발생
-    1. websocket으로 서버와 통신할 때는 protocol을 ws를 사용하기 때문에 |
-    
     | Problem | put 으로 통신하려 하는데 400에러 |
     | --- | --- |
     | Reason | body 값을 빈 오브젝트로 만들지 않았음 |
