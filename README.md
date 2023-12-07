@@ -60,12 +60,6 @@
     `Slack`, `Gather`
     
 
-### 📋 ERD
-
----
-
-![ERD 완성.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8a4fe66e-b4dc-4fc3-8969-198b3edc36ba/ERD_%EC%99%84%EC%84%B1.png)
-
 ### 📎 주요 기능
 
 ---
@@ -165,9 +159,7 @@
     | Problem | put 으로 통신하려 하는데 400에러 |
     | --- | --- |
     | Reason | body 값을 빈 오브젝트로 만들지 않았음 |
-    | Try to solve | header를 통합하고 싶은데 body 값을 빈 오브젝트로 만들지 않으면 header가 body로 인식되지 않아서 원하지 않는 결과 값을 발생시킴
-    그래서 빈 오브젝트를 같이 넣어줘야 header위치에 있는걸 header로 
-    인식함 |
+    | Try to solve | header를 통합하고 싶은데 body 값을 빈 오브젝트로 만들지 않으면 header가 body로 인식되지 않아서 원하지 않는 결과 값을 발생시킴 그래서 빈 오브젝트를 같이 넣어줘야 header위치에 있는걸 header로 인식함 |
     
     | Problem | Fast Refresh 기능이 런타임 오류로 전체 페이지를 로드할 때 발생 |
     | --- | --- |
@@ -177,6 +169,5 @@
     | Problem | SSR 초기 렌더링 이슈 |
     | --- | --- |
     | Reason | 서버에서 렌더링된 HTML과 클라이언트에서 생성된 UI 간에 일치하지 않는 부분에대한 오류 |
-    | Try to solve | SSR에서는 초기 렌더링 시에 컴포넌트의 라이프사이클이 서버와 클라이언트간에 다를 수 있어서, 서버에서는 useEffect 콜백이 실행되고, 클라이언트에서도 마운트가 발생하면 useEffect 콜백이 다시 실행될 수 있다.
-    이런 경우, 클라이언트에서 발생한 마운트 시에 중복된 작업이 발생하는 것을 setMounted(true); 를 실행해서 중복 작업을 방지하는 것이다. |
+    | Try to solve | SSR에서는 초기 렌더링 시에 컴포넌트의 라이프사이클이 서버와 클라이언트간에 다를 수 있어서, 서버에서는 useEffect 콜백이 실행되고, 클라이언트에서도 마운트가 발생하면 useEffect 콜백이 다시 실행될 수 있다. 이런 경우, 클라이언트에서 발생한 마운트 시에 중복된 작업이 발생하는 것을 setMounted(true); 를 실행해서 중복 작업을 방지하는 것이다. |
 
