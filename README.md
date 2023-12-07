@@ -23,17 +23,9 @@
 
 🖌️ 자신의 와인 경험을 기록하고, 추천 받은 와인들에 대한 정보를 저장하여 참고할 수 있어요!
 
-## 시연 영상
-
-[2조 와렌디 협업 프로젝트](https://www.youtube.com/watch?v=Ida-XzLEmQ8)
-
-## Project
-
-[warendy](https://github.com/warendy)
-
 ### ⚙️ 프로젝트 아키텍쳐
 
----
+https://www.notion.so/2-Warendy-c7bdcf817a484e5ab61b05e13a9c4f66?pvs=4#3f916b53c0824f2f8d9ab74d35afcc06
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1c182137-cfc1-46aa-ba92-5af07ed97943/Untitled.png)
 
