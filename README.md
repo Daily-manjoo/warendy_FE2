@@ -78,11 +78,7 @@ https://www.notion.so/2-Warendy-c7bdcf817a484e5ab61b05e13a9c4f66?pvs=4#3f916b53c
 
 - 회원가입
     
-    [회원가입 페이지](https://www.notion.so/f68b815552c0406f943b6445f23f9ad7?pvs=21)
-    
 - 로그인/로그아웃
-    
-    [로그인 페이지](https://www.notion.so/30ca928f17ba4432af63dc0ed36ca9f4?pvs=21)
     
 - 취향 선택
     
@@ -108,34 +104,23 @@ https://www.notion.so/2-Warendy-c7bdcf817a484e5ab61b05e13a9c4f66?pvs=4#3f916b53c
     Best Wines - 메인 페이지 접속 시 보이는 와인 추천
     
 - 와인 컬렉션
-    
-    [와인컬렉션 페이지](https://www.notion.so/8594e5803e89455ea9b2350d3de2d138?pvs=21)
-    
     - 배경: 유저가 좋아하는 와인을 선택, 저장하고 주제 별로 확인 할 수 있는 공간 제공.
 - 주변 와인 바
     - 배경 - 특정 위도, 경도 중심 가까운 순으로 쉽게 원하는 와인 바를 찾을 수 있는 방법 제공.
     
-    [내 위치에서 와인가게 추천](https://www.notion.so/e7f961c693f94c45b9ec2dd5efed605c?pvs=21)
     
 - 커뮤니티 - 동행 게시글
     - 배경 - 유저들이 함께 와인 마실 사람을 구하고 확인 할 수 있는 공간을 제공.
     - 게시글 조회 - 다른 테이블과 연관 관계가 많아 데이터 조회하는데 성능 저하와, 순환 참조 오류 등이 발생. 제약 조건을 추가해 문제 해결 .
     - 게시글 삭제 - 사이버 불릿이나 익명성 관련 사이버 문제에 대응하기 위해, 삭제 시 완전 삭제가 아닌, status 변경.(deleteAt update)
     - 동행 게시글 참가 - board 테이블에 참가자 닉네임을 Set으로 저장하여, 한 유저가 여러 번 들어가지 않게 방지.
-    
-    [게시글 보여주기](https://www.notion.so/c298ee7b0b2947e58254881a8fe6eae6?pvs=21)
+
     
 - 마이페이지
     
-    [마이페이지](https://www.notion.so/d294d025e97f4b68ae2323d0baa1ebbe?pvs=21)
-    
 - 회원 정보 수정/삭제
     
-    [회원정보 수정 페이지](https://www.notion.so/2940c0ac135942719fdb1b2964c0a374?pvs=21)
-    
 - 리뷰페이지
-    
-    [리뷰페이지](https://www.notion.so/a10b311fd0334536a5ef3d01df554a8f?pvs=21)
     
 
 ---
@@ -143,12 +128,8 @@ https://www.notion.so/2-Warendy-c7bdcf817a484e5ab61b05e13a9c4f66?pvs=4#3f916b53c
 - 커뮤니티 - 채팅(BE)
     - 게시글 내에서 채팅에 참여하여 동행에 대한 궁금증을 해결하는 공간 제공.
     
-    ![ezgif.com-video-to-gif.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/39ba5171-a673-4265-a2a5-d56137450578/ezgif.com-video-to-gif.gif)
-    
 - 커뮤니티 - 알람(BE)
     - 다른 유저가 내가 참여한 동행 게시글에 참여했을 때 확인 할 수 있는 알람 제공.
-    
-    ![ezgif.com-video-to-gif.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5566b1dc-cf90-4eed-b2f8-7f4c490652e8/ezgif.com-video-to-gif.gif)
     
 
 ### 🎯 트러블 슈팅
@@ -161,7 +142,7 @@ https://www.notion.so/2-Warendy-c7bdcf817a484e5ab61b05e13a9c4f66?pvs=4#3f916b53c
     | Problem | 설문조사 시 어떻게 값을 저장하고 그에 맞는 결과를 보여주는지 |
     | --- | --- |
     | Reason | 알고리즘에 약한 나의 수학적 능력 |
-    | Try to solve | 리코일을 사용해 해당 와인 타입들을 만든 다음 문항수마다 타입값들을 저장해 해당 수치들이 전부 낮게 나온다면 와인 입문자로 만들어버림(?)  |
+    | Try to solve | 리코일을 사용해 해당 와인 타입들을 만든 다음 문항수마다 타입값들을 저장해 해당 수치들이 전부 낮게 나온다면 와인 입문자로 만들어버림  |
     | Alternative | 설문조사의 로직들을 util로 따로 빼서 스파게티 코드 방지하기 |
     
     | Problem | Next.js 사용 시 폴더 구조 세분화 |
@@ -227,6 +208,7 @@ https://www.notion.so/2-Warendy-c7bdcf817a484e5ab61b05e13a9c4f66?pvs=4#3f916b53c
     | Reason | 서버에서 렌더링된 HTML과 클라이언트에서 생성된 UI 간에 일치하지 않는 부분에대한 오류 |
     | Try to solve | SSR에서는 초기 렌더링 시에 컴포넌트의 라이프사이클이 서버와 클라이언트간에 다를 수 있어서, 서버에서는 useEffect 콜백이 실행되고, 클라이언트에서도 마운트가 발생하면 useEffect 콜백이 다시 실행될 수 있다.
     이런 경우, 클라이언트에서 발생한 마운트 시에 중복된 작업이 발생하는 것을 setMounted(true); 를 실행해서 중복 작업을 방지하는 것이다. |
+  
 - **BackEnd**
     
     
@@ -353,8 +335,6 @@ https://www.notion.so/2-Warendy-c7bdcf817a484e5ab61b05e13a9c4f66?pvs=4#3f916b53c
     
     - 403 에러.
       1. mockMvc 호출 시 .with(csrf()) 함수 추가. |
-
-[트러블 슈팅](https://www.notion.so/07e594048c8d4ce1ac6b22d3ea291ba0?pvs=21)
 
 ## 🌲 팀원 **소개**
 
